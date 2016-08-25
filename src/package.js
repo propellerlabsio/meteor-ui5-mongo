@@ -23,7 +23,7 @@ Package.onUse((api) => {
 
   // Add package so we can reference Mongo collections by name, imply it
   // so UI5 app builders can do the same.
-  api.use('dburles:mongo-collection-instances');
+  api.use('dburles:mongo-collection-instances@0.1.3');
   api.imply('dburles:mongo-collection-instances');
 
   // Add our model and control files. Note OpenUI5 requires these files to be
