@@ -1,5 +1,5 @@
 {
-  "name": "Meteor-UI5-package-builder",
+  "name": "Meteor-UI5-Mongo-package-builder",
   "version": "0.1.0",
   "description": "Build system for Meteor package. NOTE: This is not an NPM-published package.  This file only serves the Grunt build tool for building an Atmosphere package.",
   "main": "package.js",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/propellerlabsio/meteor-ui5.git"
+    "url": "git+https://github.com/propellerlabsio/meteor-ui5-mongo.git"
   },
   "keywords": [
     "meteor",
@@ -43,7 +43,7 @@
   "author": "PropellerLabs.io",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/propellerlabsio/meteor-ui5/issues"
+    "url": "https://github.com/propellerlabsio/meteor-ui5-mongo/issues"
   },
   "homepage": "http://meteor-ui5.propellerlabs.io"
 }

@@ -1,5 +1,6 @@
-module.exports = function(grunt) {
+"use strict";
 
+module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -12,8 +13,8 @@ module.exports = function(grunt) {
         src: ['src/**/*.js', 'README.md'],
         options: {
           destination: 'doc',
-          template: "node_modules/ink-docstrap/template",
-          configure: "jsdoc.conf.json"
+          template: 'node_modules/ink-docstrap/template',
+          configure: 'jsdoc.conf.json'
         }
       }
     },
@@ -24,21 +25,21 @@ module.exports = function(grunt) {
       },
       babel_out: {
         files: [{
-          "expand": true,
-          "cwd": "src/ui5",
-          "src": ["**/*.js"],
-          "dest": "temp/babel_out",
-          "ext": ".js"
+          expand: true,
+          cwd: 'src/model',
+          src: ['**/*.js'],
+          dest: 'temp/babel_out/model',
+          ext: '.js'
         }]
       }
     },
     uglify: {
       dist: {
         files: [{
-          "expand": true,
-          "cwd": "temp/babel_out",
-          "src": ["**/*.js"],
-          "dest": "dist",
+          expand: true,
+          cwd: 'temp/babel_out',
+          src: ['**/*.js'],
+          dest: 'dist',
         }]
       }
     }
@@ -50,6 +51,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
+
+  // Local task: Copy README
+  grunt.registerTask(
+    'create_readme',
+    'Copy README to package dist',
+    function() {
+      grunt.file.copy('README.md', 'dist/README.md');
+      grunt.log.ok('Copied README to package dist.');
+    }
+  );
 
   // Local task: Create meteor package file
   grunt.registerTask(
@@ -63,19 +74,6 @@ module.exports = function(grunt) {
     }
   );
 
-  // Local task: Copy meteor source files straight to dist folder.  Meteor
-  // build process will handle minification and whatever other task have to
-  // happen.
-  grunt.registerTask(
-    'copy_meteor_sources_to_dist',
-    'Copying meteor sources to dist.',
-    function() {
-      grunt.file.copy('src/meteor', 'dist/meteor');
-      grunt.log.ok('Meteor sources copied unprocessed.');
-    }
-  );
-
-
   // Local task: Create UI5 debug files
   grunt.registerTask(
     'create_ui5_debug_files',
@@ -83,22 +81,22 @@ module.exports = function(grunt) {
     function() {
       // TODO move this into outside function so the grunt file is easier to
       // to follow. I tried but couldn't get a reference to the grunt object
-      var debugFilesCreated = 0;
-      var sourceMapsCopied = 0;
+      let debugFilesCreated = 0;
+      let sourceMapsCopied = 0;
 
       // Recurse babel output directory copying unminfied javascript to dist
-      // directory but with "-dbg" in the name before the first dot.
+      // directory but with '-dbg' in the name before the first dot.
       grunt.file.recurse(
         'temp/babel_out',
         function(abspath, root, subdir, filename) {
           // Ignore root directory
           if (subdir) {
             // Only create -dbg versions of javascript files
-            if (filename.endsWith(".js")) {
+            if (filename.endsWith('.js')) {
               // Source file is absolute path
               var sourceFile = abspath;
 
-              // Destination file name has "-dbg" in the filename before first period
+              // Destination file name has '-dbg' in the filename before first period
               var firstPeriod = filename.indexOf('.');
               var destFileName = [
                 filename.slice(0, firstPeriod),
@@ -107,12 +105,12 @@ module.exports = function(grunt) {
               ].join('');
 
               // Destination is in 'dist' directory
-              var destFile = 'dist/' + subdir + '/' + destFileName;
+              const destFile = 'dist/' + subdir + '/' + destFileName;
 
               // Copy file
               grunt.file.copy(sourceFile, destFile);
               debugFilesCreated++;
-            } else if (filename.endsWith(".map")) {
+            } else if (filename.endsWith('.map')) {
               // Just copy source maps as is.  Babel includes the original
               // name at the bottom of the javascript file.
               var sourceFile = abspath;
@@ -143,9 +141,9 @@ module.exports = function(grunt) {
     'jsdoc',
     'babel',
     'uglify',
-    'copy_meteor_sources_to_dist',
     'create_package_js',
-    'create_ui5_debug_files'
+    'create_ui5_debug_files',
+    'create_readme'
   ]);
 
 };

@@ -1,5 +1,5 @@
 /**
- * @file meteor-ui5.model.mongo.DocumentListBinding.js
+ * @file meteor-ui5-mongo.model.DocumentListBinding.js
  * @copyright PropellerLabs.io 2016
  * @license Apache-2.0
  */
@@ -26,7 +26,7 @@ sap.ui.define([
    * Each instance of this class observes changes on a query handle to provide
    * reactive updates via firing events.
    *
-   * @param {meteor-ui5.model.mongo.Model} oModel
+   * @param {meteor-ui5-mongo.model.Model} oModel
    * @param {string} sPath
    * @param {sap.ui.model.Context} oContext
    * @param {array} [aSorters] initial sort order (can be either a sorter or an array of sorters)
@@ -34,10 +34,10 @@ sap.ui.define([
    * @param {object} [mParameters]
    *
    * @public
-   * @alias meteor-ui5.model.mongo.DocumentListBinding
+   * @alias meteor-ui5-mongo.model.DocumentListBinding
    * @extends sap.ui.model.ListBinding
    */
-  var cDocumentListBinding = ListBinding.extend("meteor-ui5.model.mongo.DocumentListBinding", {
+  var cDocumentListBinding = ListBinding.extend("meteor-ui5-mongo.model.DocumentListBinding", {
 
     constructor: function(oModel, sPath, oContext, aSorters, aFilters, mParameters) {
 
@@ -57,7 +57,7 @@ sap.ui.define([
    * @summary Returns an array of binding contexts for the bound target list.
    *
    * @description <strong>Note:</strong>The parent class method documentation
-   * indicates tht public usage of this method is deprecated use {@link meteor-ui5.model.mongo.DocumentListBinding.prototype.getCurrentContexts}
+   * indicates tht public usage of this method is deprecated use {@link meteor-ui5-mongo.model.DocumentListBinding.prototype.getCurrentContexts}
    * instead.
    *
    * @param {int} [iStartIndex=0] the startIndex where to start the retrieval of contexts
@@ -97,7 +97,7 @@ sap.ui.define([
    *
    * @param {object[]} aFilters Array of filter objects
    * @param {sap.ui.model.FilterType} sFilterType Type of the filter which should be adjusted, if it is not given, the standard behaviour applies
-   * @return {meteor-ui5.model.mongo.DocumentListBinding} returns <code>this</code> to facilitate method chaining
+   * @return {meteor-ui5-mongo.model.DocumentListBinding} returns <code>this</code> to facilitate method chaining
    *
    * @public
    */
@@ -121,7 +121,7 @@ sap.ui.define([
    * Sorts the list according to the sorter object
    *
    * @param {sap.ui.model.Sorter|Array} aSorters the Sorter object or an array of sorters which defines the sort order
-   * @return {meteor-ui5.model.mongo.DocumentListBinding} returns <code>this</code> to facilitate method chaining
+   * @return {meteor-ui5-mongo.model.DocumentListBinding} returns <code>this</code> to facilitate method chaining
    * @public
    */
   cDocumentListBinding.prototype.sort = function(aSorters) {

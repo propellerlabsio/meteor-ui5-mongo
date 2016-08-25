@@ -1,5 +1,5 @@
 /**
- * @file meteor-ui5.model.mongo.PropertyListBinding.js
+ * @file meteor-ui5-mongo.model.PropertyListBinding.js
  * @copyright PropellerLabs.io 2016
  * @license Apache-2.0
  */
@@ -22,7 +22,7 @@ sap.ui.define([
    * Note: Sorting and filtering have not been implemented yet (v0.1).  This is
    * planned for (v0.2).
    *
-   * @param {meteor-ui5.model.mongo.Model} oModel
+   * @param {meteor-ui5-mongo.model.Model} oModel
    * @param {string} sPath
    * @param {sap.ui.model.Context} oContext
    * @param {array} [aSorters] Not supported yet
@@ -30,10 +30,10 @@ sap.ui.define([
    * @param {object} [mParameters]
    *
    * @public
-   * @alias meteor-ui5.model.mongo.PropertyListBinding
+   * @alias meteor-ui5-mongo.model.PropertyListBinding
    * @extends sap.ui.model.ListBinding
    */
-  var cPropertyListBinding = ListBinding.extend("meteor-ui5.model.mongo.PropertyListBinding", {
+  var cPropertyListBinding = ListBinding.extend("meteor-ui5-mongo.model.PropertyListBinding", {
 
     constructor: function(oModel, sPath, oContext, aSorters, aFilters, mParameters) {
 
@@ -102,7 +102,7 @@ sap.ui.define([
    * Returns an array of binding contexts for the bound target list.
    *
    * @description <strong>Note:</strong>The parent class method documentation
-   * indicates tht public usage of this method is deprecated use {@link meteor-ui5.model.mongo.PropertyListBinding.prototype.getCurrentContexts}
+   * indicates tht public usage of this method is deprecated use {@link meteor-ui5-mongo.model.PropertyListBinding.prototype.getCurrentContexts}
    * instead.
    *
    * @param {int} [iStartIndex=0] the startIndex where to start the retrieval of contexts
@@ -160,7 +160,7 @@ sap.ui.define([
    *
    * @param {object[]} aFilters Array of filter objects
    * @param {sap.ui.model.FilterType} sFilterType Type of the filter which should be adjusted, if it is not given, the standard behaviour applies
-   * @return {meteor-ui5.model.mongo.PropertyListBinding} returns <code>this</code> to facilitate method chaining
+   * @return {meteor-ui5-mongo.model.PropertyListBinding} returns <code>this</code> to facilitate method chaining
    *
    * @public
    */
@@ -180,7 +180,7 @@ sap.ui.define([
    * implemented yet in this model.
    *
    * @param {sap.ui.model.Sorter|Array} aSorters the Sorter object or an array of sorters which defines the sort order
-   * @return {meteor-ui5.model.mongo.PropertyListBinding} returns <code>this</code> to facilitate method chaining
+   * @return {meteor-ui5-mongo.model.PropertyListBinding} returns <code>this</code> to facilitate method chaining
    * @public
    */
   cPropertyListBinding.prototype.sort = function(aSorters) {

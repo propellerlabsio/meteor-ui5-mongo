@@ -1,5 +1,5 @@
 /**
- * @file meteor-ui5.model.mongo.PropertyBinding.js
+ * @file meteor-ui5-mongo.model.PropertyBinding.js
  * @copyright PropellerLabs.io 2016
  * @license Apache-2.0
  */
@@ -19,16 +19,16 @@ sap.ui.define([
      * @description The PropertyBinding is used to access single data values in
      * the data model.
      *
-     * @param {meteor-ui5.model.mongo.Model} oModel
+     * @param {meteor-ui5-mongo.model.Model} oModel
      * @param {string} sPath
      * @param {sap.ui.model.Context} oContext
      * @param {object} [mParameters]
      *
      * @public
-     * @alias meteor-ui5.model.mongo.PropertyBinding
+     * @alias meteor-ui5-mongo.model.PropertyBinding
      * @extends sap.ui.model.PropertyBinding
      */
-    var cPropertyBinding = PropertyBinding.extend("meteor-ui5.model.mongo.PropertyBinding", {
+    var cPropertyBinding = PropertyBinding.extend("meteor-ui5-mongo.model.PropertyBinding", {
 
       constructor: function(oModel, sPath, oContext, mParameters) {
 				// Call super constructor

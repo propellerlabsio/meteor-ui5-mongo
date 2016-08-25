@@ -1,5 +1,5 @@
 /**
- * @file meteor-ui5.model.mongo.ContextBinding.js
+ * @file meteor-ui5-mongo.model.ContextBinding.js
  * @copyright PropellerLabs.io 2016
  * @license Apache-2.0
  */
@@ -24,15 +24,15 @@ sap.ui.define([
      * Each instance of this class observes changes on a query handle to provide reactive updates via firing
      * events.
      *
-     * @param {meteor-ui5.model.mongo.Model} oModel
+     * @param {meteor-ui5-mongo.model.Model} oModel
      * @param {String} sPath
      * @param {Object} oContext
      * @param {Object} [mParameters]
      * @public
-     * @alias meteor-ui5.model.mongo.ContextBinding
+     * @alias meteor-ui5-mongo.model.ContextBinding
      * @extends sap.ui.model.ContextBinding
      */
-    var cContextBinding = ContextBinding.extend("meteor-ui5.model.mongo.ContextBinding", {
+    var cContextBinding = ContextBinding.extend("meteor-ui5-mongo.model.ContextBinding", {
 
       constructor: function(oModel, sPath, oContext, mParameters, oEvents) {
         // Call super constructor

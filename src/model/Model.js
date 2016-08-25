@@ -1,9 +1,9 @@
 /**
- * @file meteor-ui5.model.mongo.Model.js
+ * @file meteor-ui5-mongo.model.Model.js
  * @copyright PropellerLabs.io 2016
  * @license Apache-2.0
  *
- * @namespace meteor-ui5.model.mongo
+ * @namespace meteor-ui5-mongo.model
  * @description Meteor UI5 Mongo Model
  */
 /* eslint-disable */
@@ -44,9 +44,9 @@ sap.ui.define([
    *
    * @constructor
    * @public
-   * @alias meteor-ui5.model.mongo.Model
+   * @alias meteor-ui5-mongo.model.Model
    */
-  var cModel = Model.extend("meteor-ui5.model.mongo.Model", {
+  var cModel = Model.extend("meteor-ui5-mongo.model.Model", {
 
     constructor: function(iSizeLimit) {
       Model.apply(this, arguments);
@@ -78,7 +78,7 @@ sap.ui.define([
    *         [oContext=null] the context object for this databinding (optional)
    * @param {object}
    *         [mParameters=null] additional model specific parameters (optional)
-   * @return {meteor-ui5.model.mongo.PropertyBinding}
+   * @return {meteor-ui5-mongo.model.PropertyBinding}
    *
    * @public
    */
@@ -104,8 +104,8 @@ sap.ui.define([
    *         [aFilters=null] predefined filter/s (can be either a filter or an array of filters) (optional)
    * @param {object}
    *         [mParameters=null] additional model specific parameters (optional)
-   * @return {meteor-ui5.model.mongo.DocumentListBinding |
-   *         meteor-ui5.model.mongo.PropertyListBinding}
+   * @return {meteor-ui5-mongo.model.DocumentListBinding |
+   *         meteor-ui5-mongo.model.PropertyListBinding}
 
    * @public
    */
@@ -134,7 +134,7 @@ sap.ui.define([
    *         [mParameters=null] additional model specific parameters (optional)
    * @param {array}
    *         [aSorters=null] predefined sap.ui.model.sorter/s contained in an array (optional)
-   * @return {meteor-ui5.model.mongo.TreeBinding}
+   * @return {meteor-ui5-mongo.model.TreeBinding}
 
    * @public
    */
@@ -204,7 +204,7 @@ sap.ui.define([
    * ?Customers("CustomerID") where ?Customers is the Mongo collection to be
    * queried and "CustomerId" is the name of the property at the current path
    * that contains the unique Mongo Id of the customer document.
-   * @see meteor-ui5.model.mongo.Model.prototype._getLookupProperty
+   * @see meteor-ui5-mongo.model.Model.prototype._getLookupProperty
    *
    * @param {string}
    *         sPath the path to where to read the attribute value
@@ -456,7 +456,7 @@ sap.ui.define([
    *         [mParameters=null] additional model specific parameters (optional)
    * @param {object}
    *         [oEvents=null] event handlers can be passed to the binding ({change:myHandler})
-   * @return {meteor-ui5.model.mongo.ContextBinding}
+   * @return {meteor-ui5-mongo.model.ContextBinding}
    *
    * @public
    */
