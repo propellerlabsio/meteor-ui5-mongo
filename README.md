@@ -6,7 +6,7 @@ This package can be added to your meteor project with `meteor add propellerlabsi
 
 Please see the [Meteor Ui5 website](http://meteor-ui5.propellerlabs.io) for documentation and demos of all of the features of this and the related meteor-ui5 packages. In particular, the following resources might be useful:
 * [Quickstart guide](http://meteor-ui5.propellerlabs.io/#/docs/quickstart)
-* [Tutorial](http://meteor-ui5.propellerlabs.io/#/tutorial)
+* [Tutorial](http://meteor-ui5.propellerlabs.io/#/tutorial/mongo/step/00)
 
 ## Contributing
 
