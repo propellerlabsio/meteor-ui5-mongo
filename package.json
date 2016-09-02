@@ -40,10 +40,10 @@
     "openui5",
     "sapui5"
   ],
-  "author": "PropellerLabs.io",
+  "author": "PropellerLabs.com",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/propellerlabsio/meteor-ui5-mongo/issues"
   },
-  "homepage": "http://meteor-ui5.propellerlabs.io"
+  "homepage": "http://meteor-ui5.PropellerLabs.com"
 }

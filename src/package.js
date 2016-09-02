@@ -1,6 +1,6 @@
 /**
  * @file package.js
- * @copyright PropellerLabs.io 2016
+ * @copyright PropellerLabs.com 2016
  * @license Apache-2.0
  *
  * @namespace meteor-ui5-mongo
@@ -11,7 +11,7 @@
 
 Package.describe({
   name: 'propellerlabsio:meteor-ui5-mongo',
-  version: '0.1.0',
+  version: '0.1.1',
   summary: 'UI5 with Meteor Mongo databases',
   git: 'https://github.com/propellerlabsio/meteor-ui5-mongo',
   documentation: 'README.md'

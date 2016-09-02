@@ -1,6 +1,6 @@
 /**
  * @file meteor-ui5-mongo.model.Model.js
- * @copyright PropellerLabs.io 2016
+ * @copyright PropellerLabs.com 2016
  * @license Apache-2.0
  *
  * @namespace meteor-ui5-mongo.model
@@ -39,7 +39,7 @@ sap.ui.define([
    *
    * @extends sap.ui.model.Model
    *
-   * @author PropellerLabs.io
+   * @author PropellerLabs.com
    * @version ${version}
    *
    * @constructor

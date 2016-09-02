@@ -4,9 +4,9 @@ This is a Meteor package for using UI5 with Mongo databases.  It contains a new 
 ## Using this package
 This package can be added to your meteor project with `meteor add propellerlabsio:meteor-ui5-mongo`.
 
-Please see the [Meteor Ui5 website](http://meteor-ui5.propellerlabs.io) for documentation and demos of all of the features of this and the related meteor-ui5 packages. In particular, the following resources might be useful:
-* [Quickstart guide](http://meteor-ui5.propellerlabs.io/#/docs/quickstart)
-* [Tutorial](http://meteor-ui5.propellerlabs.io/#/tutorial/mongo/step/00)
+Please see the [Meteor Ui5 website](http://meteor-ui5.PropellerLabs.com) for documentation and demos of all of the features of this and the related meteor-ui5 packages. In particular, the following resources might be useful:
+* [Quickstart guide](http://meteor-ui5.PropellerLabs.com/#/docs/quickstart)
+* [Tutorial](http://meteor-ui5.PropellerLabs.com/#/tutorial/mongo/step/00)
 
 ## Contributing
 

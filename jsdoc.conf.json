@@ -10,7 +10,7 @@
   "plugins": [],
   "templates": {
     "systemName"            : "Meteor-UI5 Package",
-    "copyright"             : "Copyright 2016 PropellerLabs.io",
+    "copyright"             : "Copyright 2016 PropellerLabs.com",
     "includeDate"           : true,
     "theme"                 : "cerulean",
     "linenums"              : true,

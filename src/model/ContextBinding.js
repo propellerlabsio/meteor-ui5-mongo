@@ -1,6 +1,6 @@
 /**
  * @file meteor-ui5-mongo.model.ContextBinding.js
- * @copyright PropellerLabs.io 2016
+ * @copyright PropellerLabs.com 2016
  * @license Apache-2.0
  */
 /* eslint-disable */
