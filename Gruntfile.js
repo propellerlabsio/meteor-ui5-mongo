@@ -42,7 +42,35 @@ module.exports = function(grunt) {
           dest: 'dist',
         }]
       }
-    }
+    },
+    openui5_preload: {
+      library: {
+        options: {
+          resources: {
+            cwd: 'dist', // this should point to the entry folder
+            prefix: 'meteor-ui5-mongo', // this should be your component namespace
+            src: [
+              // src patterns start within the "cwd"
+              '**/*.js',
+              '**/*.fragment.html',
+              '**/*.fragment.json',
+              '**/*.fragment.xml',
+              '**/*.view.html',
+              '**/*.view.json',
+              '**/*.view.xml',
+              '**/*.properties',
+              '!package.js',  
+              '!**/*-dbg.js'
+            ],
+          },
+
+          dest: 'dist', // to put the file in the same folder
+
+          compress: true
+        },
+        libraries: true
+      }
+    }    
   });
 
   // Load grunt plugin tasks from pre-installed npm packages
@@ -51,6 +79,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-openui5');
 
   // Local task: Copy README
   grunt.registerTask(
@@ -59,6 +88,16 @@ module.exports = function(grunt) {
     function() {
       grunt.file.copy('README.md', 'dist/README.md');
       grunt.log.ok('Copied README to package dist.');
+    }
+  );
+
+  // Local task: Create UI5 library file
+  grunt.registerTask(
+    'create_library_js',
+    'Create libary file',
+    function() {
+      grunt.file.copy('src/library.js', 'dist/library.js');
+      grunt.log.ok('library.js copied from src/.');
     }
   );
 
@@ -142,7 +181,9 @@ module.exports = function(grunt) {
     'babel',
     'uglify',
     'create_package_js',
+    'create_library_js',
     'create_ui5_debug_files',
+    'openui5_preload',
     'create_readme'
   ]);
 

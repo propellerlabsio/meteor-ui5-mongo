@@ -11,7 +11,7 @@
 
 Package.describe({
   name: 'propellerlabsio:meteor-ui5-mongo',
-  version: '0.1.1',
+  version: '0.2.0',
   summary: 'UI5 with Meteor Mongo databases',
   git: 'https://github.com/propellerlabsio/meteor-ui5-mongo',
   documentation: 'README.md'
@@ -30,6 +30,8 @@ Package.onUse((api) => {
   // served as is with none of meteor's processing which is why we use the bare and
   // isAsset options.
   api.addFiles([
+    'library.js',
+    'library-preload.json',
     'model/ContextBinding.js',
     'model/ContextBinding-dbg.js',
     'model/ContextBinding.js.map',
