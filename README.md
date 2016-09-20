@@ -33,9 +33,9 @@ To use your local version of the code in a meteor project:
 
 ## Roadmap
 
-### v0.1 - Current version
+### v0.2 - Current version
 
-### v0.2+
+### v0.3+
 
 1. Add multifilter support (where single filter object is itself an array of filters with and/or conditions defined between them).
 1. Filtering/sorting on list binding to array properties of single documents.
@@ -51,6 +51,7 @@ To use your local version of the code in a meteor project:
 | Version | Description |
 | ---- | ------- |
 | `0.1.0` | The initial version. |
+| `0.2.0` | Create library so model files can be preloaded. |
 
 ## License
 This software is licensed under the Apache License, Version 2.0 - see LICENSE.txt
