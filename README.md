@@ -31,9 +31,15 @@ To use your local version of the code in a meteor project:
 1. In that folder create a symbolic link to the `dist` folder in this repo - e.g. `ln -s ~/git/meteor-ui5-mongo/dist meteor-ui5-mongo`
 1. Install the package with the normal command, i.e. `meteor add propellerlabsio:meteor-ui5-mongo`.
 
+## Deploying
+* Increment the version in the following files: `package.json`, `src/package.js`, `src/library.js` and in the roadmap of this `README.md` file.
+* Run the build script with `npm run-script build`.
+* Test.  
+* Publish with `meteor publish` from the `dist` folder.
+
 ## Roadmap
 
-### v0.2 - Current version
+### v0.2.1 - Current version
 
 ### v0.3+
 
@@ -52,6 +58,7 @@ To use your local version of the code in a meteor project:
 | ---- | ------- |
 | `0.1.0` | The initial version. |
 | `0.2.0` | Create library so model files can be preloaded. |
+| `0.2.1` | Create library-dbg.js to allow UI5 debug mode. |
 
 ## License
 This software is licensed under the Apache License, Version 2.0 - see LICENSE.txt

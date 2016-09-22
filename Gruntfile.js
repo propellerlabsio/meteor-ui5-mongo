@@ -59,7 +59,7 @@ module.exports = function(grunt) {
               '**/*.view.json',
               '**/*.view.xml',
               '**/*.properties',
-              '!package.js',  
+              '!package.js',
               '!**/*-dbg.js'
             ],
           },
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         },
         libraries: true
       }
-    }    
+    }
   });
 
   // Load grunt plugin tasks from pre-installed npm packages
@@ -97,6 +97,7 @@ module.exports = function(grunt) {
     'Create libary file',
     function() {
       grunt.file.copy('src/library.js', 'dist/library.js');
+      grunt.file.copy('src/library.js', 'dist/library-dbg.js');
       grunt.log.ok('library.js copied from src/.');
     }
   );

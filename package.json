@@ -1,6 +1,6 @@
 {
   "name": "Meteor-UI5-Mongo-package-builder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Build system for Meteor package. NOTE: This is not an NPM-published package.  This file only serves the Grunt build tool for building an Atmosphere package.",
   "main": "package.js",
   "directories": {

@@ -10,7 +10,7 @@ sap.ui.define(
     const libary = sap.ui.getCore().initLibrary({
       name: 'meteor-ui5-mongo',
 
-      version: '0.2.0',
+      version: '0.2.1',
 
       dependencies: [],
 
